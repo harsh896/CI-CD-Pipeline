@@ -20,7 +20,7 @@ pipeline {
                // Build the app.
                sh 'go build'              
            }    
-       }
+       }/*
        stage('Test') {
            agent {
                docker {
@@ -38,7 +38,7 @@ pipeline {
                // Run Unit Tests.
                sh 'go test ./... -v -short'           
            }
-       }
+       }*/
        stage('Publish') {
            environment {
                registryCredential = 'dockerhub'
